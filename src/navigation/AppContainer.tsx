@@ -6,6 +6,7 @@ import { CarPhotosAdding, CarPhotos, ImageView } from '~/screens'
 
 const navigatorOption = {
   headerShown: false,
+  headerBackTitle: 'Назад'
 }
 
 const Stack = createStackNavigator()
@@ -17,7 +18,7 @@ export default function AppContainer() {
       <Stack.Navigator initialRouteName='CarPhotosAdding' screenOptions={navigatorOption}>
         <Stack.Screen name='CarPhotosAdding' component={CarPhotosAdding} />
         <Stack.Screen name='CarPhotos' options={{ headerShown: true, title: '' }} component={CarPhotos} />
-        <Stack.Screen name='ImageView' options={{ headerShown: true, title: '' }} component={ImageView} />
+        <Stack.Screen name='ImageView' options={{ headerShown: true, title: '',  }} component={ImageView} />
       </Stack.Navigator>
     </NavigationContainer>
   )
